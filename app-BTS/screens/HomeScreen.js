@@ -11,7 +11,7 @@ const HomeScreen = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const snapshot = await EleveCollection;
+        const snapshot =  EleveCollection;
         const data = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
         setEleveData(data);
       } catch (error) {
@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
   },
    button: {
     backgroundColor: '#0782F9',
-    width: '60%',
     padding: 15,
     borderRadius: 10,
     alignItems: 'center',
